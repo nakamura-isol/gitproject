@@ -14,7 +14,7 @@ public class Lesson24 {
 
 	}
 
-	public static void getDate(String targetDate) {
+	private static void getDate(String targetDate) {
 		// 日付フォーマット指定
 		SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy/MM/dd");
 		// Calendarインスタンスを取得
@@ -44,7 +44,7 @@ public class Lesson24 {
 	}
 
 	//前日を取得
-	public static Date getYesterday(Date date) {
+	private static Date getYesterday(Date date) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
 		cal.add(Calendar.DATE, -1);
@@ -52,7 +52,7 @@ public class Lesson24 {
 	}
 
 	//翌日を取得
-	public static Date getTomorrow(Date date) {
+	private static Date getTomorrow(Date date) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
 		cal.add(Calendar.DATE, 1);
@@ -61,10 +61,10 @@ public class Lesson24 {
 	}
 
 	/**
-	 * 現在の曜日を返します。
+	 * 現在の曜日を返す
 	 * @return	現在の曜日
 	 */
-	public static String getDayOfTheWeek(Date targetDate) {
+	private static String getDayOfTheWeek(Date targetDate) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(targetDate);
 		switch (cal.get(Calendar.DAY_OF_WEEK)) {
