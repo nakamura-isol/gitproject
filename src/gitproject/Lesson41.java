@@ -1,8 +1,9 @@
+package gitproject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Lesson41_5 {
+public class Lesson41 {
 
 	public static void main(String[] args) {
 		List<Integer> tintiroList = new ArrayList<>();

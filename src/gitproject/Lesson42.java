@@ -1,3 +1,4 @@
+package gitproject;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 /**
  * 5%の確率でやかんを出してくるドラえもんのプログラム
  */
-public class Lesson42_2 {
+public class Lesson42 {
 
 	public static void main(String[] args) {
 		System.out.println("Enterを押す度、5%の確率でやかんが出てきます。");

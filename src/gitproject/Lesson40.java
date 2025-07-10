@@ -1,10 +1,11 @@
+package gitproject;
 import java.util.Random;
 import java.util.Scanner;
 
 /**
  * 丁半プログラム
  */
-public class Lesson40_4 {
+public class Lesson40 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		int syoji = 100;

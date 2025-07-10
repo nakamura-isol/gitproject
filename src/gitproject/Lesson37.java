@@ -1,3 +1,4 @@
+package gitproject;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +9,7 @@ import java.nio.file.StandardCopyOption;
 /**
  * 指定したフォルダ直下の全ファイルを別フォルダにコピーする
  */
-public class Lesson37_2 {
+public class Lesson37 {
 
 	public static void main(String[] args) {
 		copyFile("C:\\Users\\highe\\OneDrive\\ドキュメント\\課題", "C:\\Users\\highe\\OneDrive\\ドキュメント\\課題2");

@@ -1,3 +1,4 @@
+package gitproject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -5,7 +6,7 @@ import java.util.Scanner;
 /**
  * ビンゴのガラガラを回す関数
  */
-public class Lesson43_3 {
+public class Lesson43 {
 
 	public static void main(String[] args) {
 		System.out.println("Enterを押す度に1~75までの数をランダムに返します。");

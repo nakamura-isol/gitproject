@@ -1,10 +1,11 @@
+package gitproject;
 import java.util.Random;
 import java.util.Scanner;
 
 /**
  * 50%の確率で丁、50%の確率で半を出力する
  */
-public class Lesson39_2 {
+public class Lesson39 {
 
 	public static void main(String[] args) {
 		System.out.println("Enterを押す度丁か半かを返します。");
