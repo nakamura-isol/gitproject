@@ -47,9 +47,10 @@ public class ExLesson_04_ConvertFile {
 			String line;
 			// 項目のバイト位置と長さ
 			int employeeIdStart = 0, employeeIdLength = 4;
-			int nameStart = 4, nameLength = 20;
-			int ageStart = 24, ageLength = 3;
-			int telephoneNumStart = 27, telephoneNumLength = 13;
+			int nameStart = employeeIdLength, nameLength = 20;
+			int ageStart = employeeIdLength + nameLength, ageLength = 3;
+			int telephoneNumStart = employeeIdLength + nameLength + ageLength,
+					telephoneNumLength = 13;
 			while ((line = br.readLine()) != null) {
 
 				// バイト配列に変換
@@ -64,8 +65,8 @@ public class ExLesson_04_ConvertFile {
 				System.out.println(byteArray.length);
 				List<String> employeeDataList = new ArrayList<>();
 
-				String employeeId = new String(getSplitedByteArray(byteArray,
-						employeeIdStart, employeeIdLength), charset);
+				String employeeId = new String(getSplitedByteArray(byteArray, employeeIdStart, employeeIdLength),
+						charset);
 				String name = new String(getSplitedByteArray(byteArray, nameStart, nameLength),
 						charset);
 				String age = new String(getSplitedByteArray(byteArray, ageStart, ageLength),
@@ -132,5 +133,22 @@ public class ExLesson_04_ConvertFile {
 		}
 		return splitedByteArray;
 	}
+
+	// public static byte[] getSplitedByteArray(byte[] byteArray, int
+	// byteLength) {
+	// byte[] splitedByteArray = new byte[byteLength];
+	// for (int i = 0; i < byteLength; i++) {
+	// // 範囲外アクセスを防ぐ
+	// if (i < byteArray.length) {
+	//
+	// splitedByteArray[i] = byteArray[i];
+	// } else {
+	// // 長さ不足分はスペースで埋める（ASCIIコードの半角スペースのバイト値）
+	// splitedByteArray[i] = 0x20;
+	// }
+	//
+	// }
+	// return splitedByteArray;
+	// }
 
 }
