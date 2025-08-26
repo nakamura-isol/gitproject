@@ -10,8 +10,7 @@ public class Main {
 
 		University university = new University();
 		university.addStudent(student1);
-		university.addStudent(student2);
-		
+		university.addStudent(student2);		
 		university.displayStudents();
 	}
 

@@ -11,7 +11,6 @@ public class Main {
 
 		bankAccount.withdraw(1000);
 		bankAccount.displayBalance();
-
 	}
 
 }

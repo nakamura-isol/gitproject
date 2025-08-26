@@ -21,7 +21,6 @@ public class University {
 		for(Student student:studentList) {
 			System.out.println(student.getName()+"\t"+student.getStudentId());
 			
-
 		}
 		
 	}

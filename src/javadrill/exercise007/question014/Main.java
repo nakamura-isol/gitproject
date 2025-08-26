@@ -6,7 +6,6 @@ public class Main {
 		Book book1 = new Book("吾輩は猫である", "夏目漱石", 1905);
 		Book book2 = new Book("雪国", "川端康成", 1947);
 		Book book3 = new Book("ノルウェイの森", "村上春樹", 1987);
-
 		
 		// ライブラリに本を追加
 		Library library = new Library();

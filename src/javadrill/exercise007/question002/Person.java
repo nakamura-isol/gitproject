@@ -34,7 +34,7 @@ public class Person {
 	public void setSex(String sex) {
 		this.sex = sex;
 	}
-
+	
 	public void displayInfo() {
 		System.out.println("Name: " + name + "\n" + "Age: " + age + "\n" + "Sex: " + sex);
 	}

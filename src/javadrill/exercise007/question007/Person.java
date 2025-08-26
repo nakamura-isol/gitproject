@@ -34,7 +34,6 @@ public class Person {
 		personList.add(new Person("恵梨香", 30));
 		personList.add(new Person("美咲", 29));
 
-		// 出力
 		for (Person person : personList) {
 			displayInfo(person);
 		}

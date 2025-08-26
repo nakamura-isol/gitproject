@@ -35,5 +35,4 @@ public class Person {
 	public static void displayInfo(Person person) {
 		System.out.println(person.name + "\n" + person.age);
 	}
-
 }
