@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="javadrill.exercise019.question034.TakeOrderMapper">
+	
+	<!-- 顧客情報を取得する -->
+	<select id="selectCustomerDataForCustomerId"
+		resultType="javadrill.exercise019.question034.Customer">
+		SELECT
+		*
+		FROM
+		customers
+		WHERE
+		customer_id = #{customerId}
+	</select>
+
+	<!-- 商品情報を取得する -->
+	<select id="selectProductDataForProductId"
+		resultType="javadrill.exercise019.question034.Product">
+		SELECT
+		*
+		FROM
+		products
+		WHERE
+		product_id = #{productId}
+	</select>
+
+	
+	<!-- 在庫を数量分だけ減らす（在庫不足なら更新0件） -->
+	<update id="updateProductStock" parameterType="map">
+		UPDATE
+		products
+		SET
+		stock = #{newStock}
+		WHERE
+		product_id = #{productId}
+	</update>
+
+	<!-- 顧客の注文回数を増やす -->
+	<update id="updateCustomerOrderCount" parameterType="map">
+		UPDATE
+		customers
+		SET
+		order_count = #{orderCount}
+		WHERE
+		customer_id = #{customerId}	
+	</update>
+
+	<!-- 注文履歴を登録する -->
+	<insert id="insertOrderHistoryData"
+		parameterType="javadrill.exercise019.question034.OrderHistory"
+		useGeneratedKeys="true" keyProperty="orderId">
+		INSERT
+		INTO
+		order_history
+		(customer_id,
+		product_id,
+		product_name,
+		total_amount)
+		VALUES
+		(#{customerId},
+		#{productId},
+		#{productName},
+		#{totalAmount})
+	</insert>
+
+</mapper>
