@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="javadrill.exercise019.question028.UserLoginProgramMapper">
+
+  <!-- ユーザー情報を取得する -->
+  <select id="selectUserData"
+          resultType="javadrill.exercise019.question028.User">
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      user_id = #{userId}
+      AND user_password = #{userPassword}
+  </select>
+</mapper>
