@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="javadrill.exercise019.question029.InsertUserDataMapper">
+
+	<!-- ユーザーデータを登録する -->
+	<insert id="insertUserData"
+		parameterType="javadrill.exercise019.question029.User">
+		INSERT
+		INTO
+		users
+		(user_id,
+		user_password)
+		VALUES
+		(#{userId},
+		#{userPassword})
+	</insert>
+	
+	<!-- ユーザーテーブルから入力されたユーザIDがないか、確認で取得する -->
+	<select id="selectUserId" parameterType="string"
+		resultType="string">
+		SELECT user_id
+		FROM users
+		WHERE user_id = #{userId}
+	</select>
+
+
+</mapper>
