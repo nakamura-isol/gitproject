@@ -15,7 +15,7 @@ public class UserLoginProgramRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		try {
-			userLoginProgramService.takeLogin("marie", "erika0722");
+			userLoginProgramService.takeLogin("erika", "erika0722");
 			// 目的の例外だけをまず捕捉
 		} catch (InvalidCredentialsException e) {
 			System.out.println(e.getMessage());
